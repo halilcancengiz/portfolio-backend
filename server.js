@@ -67,14 +67,7 @@ app.post('/api/send-mail', async (req, res) => {
         const mailOptions = {
             from: `${fullName} <${email}>`,
             to: process.env.EMAIL_USER,
-            subject: `Yeni İletişim: ${subject}`,
-            attachments: [
-                {
-                    filename: "logo.png",
-                    path: "./public/logo.png",  // Resmin yolu
-                    cid: "uniglogo",  // HTML içinde kullanılacak CID değeri
-                }
-            ],
+            subject: subject,
             html: htmlContent,
         };
 
