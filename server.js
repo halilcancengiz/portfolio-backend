@@ -53,12 +53,11 @@ app.post('/api/send-mail', async (req, res) => {
         const htmlContent = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px;">
             <div style="background-color: white; padding: 20px; border-radius: 10px;">
-                <img src="cid:uniglogo" width="50" height="50" />
                 <p><strong>Konu:</strong> ${subject}</p>
                 <p><strong>Gönderen:</strong> ${fullName}</p>
                 <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
                 ${phoneNumber ? `<p><strong>Telefon:</strong> ${phoneNumber}</p>` : ''}         
-                ${message ? `<p><strong>Telefon:</strong> ${message}</p>` : ''} 
+                ${message ? `<p><strong>Mesaj:</strong> ${message}</p>` : ''} 
             </div>
         </div>
         `;
